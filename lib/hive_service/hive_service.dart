@@ -17,4 +17,9 @@ class HiveService {
 
     await Hive.openBox<Courses>(boxName);
   }
+
+  Future<List<Courses>> getCourses() async {
+    final box = await _box;
+    return box.values.toList();
+  }
 }

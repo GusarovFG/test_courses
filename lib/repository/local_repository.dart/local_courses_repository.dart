@@ -13,9 +13,9 @@ class LocalCoursesRepository {
 
   LocalCoursesRepository._internal();
 
-  List<Course> getCourses() {
+  Future<List<Course>> getCourses() async {
     List<Course> courses = [];
-    hive.getCourses().then((value) {
+    await hive.getCourses().then((value) {
       courses = value.first.courses;
     });
     return courses;

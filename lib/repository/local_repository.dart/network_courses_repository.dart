@@ -18,7 +18,7 @@ class NetworkCoursesRepository {
 
     if (response.isNotEmpty) {
       final courses = Courses.fromRawJson(response);
-      _hiveService.addCourses(courses);
+      await _hiveService.addCourses(courses);
       return courses.courses;
     } else {
       return [];

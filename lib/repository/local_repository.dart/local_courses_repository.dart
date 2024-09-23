@@ -1,5 +1,5 @@
 import 'package:test_courses/hive_service/hive_service.dart';
-import 'package:test_courses/models/courses_model/courses_model.dart';
+import 'package:test_courses/models/course_model/course_model.dart';
 
 class LocalCoursesRepository {
   static final LocalCoursesRepository _singleton =
@@ -13,10 +13,10 @@ class LocalCoursesRepository {
 
   LocalCoursesRepository._internal();
 
-  Courses getCourses() {
-    Courses courses = Courses(courses: []);
+  List<Course> getCourses() {
+    List<Course> courses = [];
     hive.getCourses().then((value) {
-      courses = value.first;
+      courses = value.first.courses;
     });
     return courses;
   }

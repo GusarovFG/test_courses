@@ -22,4 +22,9 @@ class HiveService {
     final box = await _box;
     return box.values.toList();
   }
+
+  Future<void> addCourses(Courses courses) async {
+    final box = await _box;
+    box.add(courses);
+  }
 }

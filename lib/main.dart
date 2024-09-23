@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_courses/hive_service/hive_service.dart';
+import 'package:test_courses/repository/local_repository.dart/network_courses_repository.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   HiveService().init();
+  print(NetworkCoursesRepository().fetchCourses());
   runApp(const MyApp());
 }
 

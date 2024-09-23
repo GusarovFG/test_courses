@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:hive/hive.dart';
-import 'package:test_courses/models/course_model.dart';
+import 'package:test_courses/models/course_model/course_model.dart';
 
 part 'courses_model.g.dart';
 

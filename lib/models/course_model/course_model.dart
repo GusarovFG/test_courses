@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:hive/hive.dart';
-import 'package:test_courses/models/lesson_model.dart';
+import 'package:test_courses/models/lesson_model/lesson_model.dart';
 
 part 'course_model.g.dart';
 

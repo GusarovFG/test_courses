@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_courses/bloc/course_block/course_block_bloc.dart';
 import 'package:test_courses/bloc/course_block/course_block_event.dart';
 import 'package:test_courses/bloc/course_block/course_block_state.dart';
+import 'package:test_courses/presentation/main_screen/courses_listView/courses_listView.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -23,6 +24,10 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Курсы'),
+        centerTitle: true,
+      ),
       body: BlocConsumer<CourseBloc, CourseBlocState>(
         bloc: _bloc,
         listener: (BuildContext context, Object? state) {},
@@ -30,29 +35,18 @@ class _MainScreenState extends State<MainScreen> {
         buildWhen: (previous, current) => current is! CourseActionState,
         builder: (BuildContext context, state) {
           switch (state.runtimeType) {
-            case CourseFetchingLoading:
-              return const CircularProgressIndicator(
-                color: Colors.red,
-              );
-            case CourseFetchingError:
+            case const (CourseFetchingLoading):
+              return const CircularProgressIndicator();
+            case const (CourseFetchingError):
               final errorstate = state as CourseFetchingError;
+
               return Center(child: Text(errorstate.errorMessage));
-            case CourseFetchingSuccess:
+            case const (CourseFetchingSuccess):
               final successstate = state as CourseFetchingSuccess;
-              print(successstate.courses);
-              return ListView.builder(
-                  itemCount: successstate.courses.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(state.courses[index].name),
-                      subtitle: Text(state.courses[index].description),
-                    );
-                  });
+
+              return CoursesListview(courses: successstate.courses);
             default:
-              return const Center(
-                  child: CircularProgressIndicator(
-                color: Colors.amber,
-              ));
+              return const Center(child: CircularProgressIndicator());
           }
         },
       ),

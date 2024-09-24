@@ -16,8 +16,9 @@ class NetworkCoursesRepository {
   Future<List<Course>> fetchCourses() async {
     var response = await rootBundle.loadString("assets/db.json");
 
-    if (response.isNotEmpty) {
-      final courses = Courses.fromRawJson(response);
+    final courses = Courses.fromRawJson(response);
+    final hiveCourses = await _hiveService.getCourses();
+    if (hiveCourses.last != courses) {
       await _hiveService.addCourses(courses);
       return courses.courses;
     } else {

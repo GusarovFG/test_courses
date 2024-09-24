@@ -31,6 +31,9 @@ class HiveService {
     final box = await _box;
     if (box.values.isEmpty) {
       box.add(courses);
+    } else if (box.values.toList().contains(courses)) {
+      box.clear();
+      box.add(courses);
     } else {
       return;
     }

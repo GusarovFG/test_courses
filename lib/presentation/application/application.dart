@@ -9,6 +9,7 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: _routes,
       initialRoute: _routes.keys.first,
     );

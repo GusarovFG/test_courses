@@ -7,5 +7,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await HiveService().init();
   NetworkCoursesRepository().fetchCourses();
-  runApp(const Application());
+  runApp(Application());
 }

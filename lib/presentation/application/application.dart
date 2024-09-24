@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:test_courses/presentation/main_screen/main_screen.dart';
+import 'package:test_courses/presentation/application/routes.dart';
 
 class Application extends StatelessWidget {
-  const Application({super.key});
+  final _routes = Routes.routes;
+
+  Application({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: MainScreen()),
+    return MaterialApp(
+      routes: _routes,
+      initialRoute: _routes.keys.first,
     );
   }
 }

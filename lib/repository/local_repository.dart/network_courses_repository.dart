@@ -12,7 +12,7 @@ class NetworkCoursesRepository {
   }
 
   NetworkCoursesRepository._internal();
-  //Получение курсов с импровизированного сервера(локальный json-файл"
+  //Получение курсов с импровизированного сервера(локальный json-файл")
   Future<List<Course>> fetchCourses() async {
     var response = await rootBundle.loadString("assets/db.json");
 

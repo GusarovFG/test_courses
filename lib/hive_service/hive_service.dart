@@ -9,6 +9,7 @@ class HiveService {
 
   Future<Box<Courses>> get _box async => Hive.box(boxName);
 
+  //Инициализация и реализация бокса
   init() async {
     final applicationDocumentDir =
         await path_provider.getApplicationDocumentsDirectory();
@@ -22,16 +23,18 @@ class HiveService {
     await Hive.openBox<Courses>(boxName);
   }
 
+  //Получение всех Курсов
   Future<List<Courses>> getCourses() async {
     final box = await _box;
     return box.values.toList();
   }
 
+  //Сохранение курсов в базе данных(если данные с сервера отличаются от данных в базе данных, то данные заменяются)
   Future<void> addCourses(Courses courses) async {
     final box = await _box;
     if (box.values.isEmpty) {
-      box.add(courses);
-    } else if (box.values.toList().contains(courses)) {
+      await box.add(courses);
+    } else if (!box.values.toList().contains(courses)) {
       box.clear();
       box.add(courses);
     } else {

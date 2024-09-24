@@ -9,10 +9,7 @@
                     "name": "Основы языка Dart",
                     "video": "qweqwqweqweqweqweqweqweqweqweqwe"
                 },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
+                
                 {
                     "name": "Основы языка Dart",
                     "video": "qweqwqweqweqweqweqweqweqweqweqwe"
@@ -21,6 +18,7 @@
                     "name": "Основы языка Dart",
                     "video": "qweqwqweqweqweqweqweqweqweqweqwe"
                 }
+            
             ]
         },
         {
@@ -28,38 +26,6 @@
             "description": "Курс по основам программирования на языке Dart. Dart это объектно-ориентированный язык программирования от компании Google, который предназначен прежде всего для разработки мобильных приложений, веб-приложений (как на стороне клиента, так и на стороне сервера) и десктопных приложений.",
             "main_description": "Добро пожаловать на курс!Научитесь программировать на Dart от Google.Dart – это объектно-ориентированный язык программирования разработанный Google. Язык Dart прежде всего предназначен для разработки веб-приложений (как на стороне клиента, так и на стороне сервера), а также для разработки мобильных приложений, с использованием SDK Flutter.Google также работает над операционной системой Fuchsia OS, которая совместима с Dart, поэтому, когда она будет выпущена, разработчики будут создавать приложения для Fuchsia с использованием Dart, и, как вы знаете, Google является технологическим гигантом, поэтому, если вы изучаете что-то, подкрепленное Google, то это всегда дополнительное преимущество для ваших навыков.Вам не нужно знать какой-либо язык программирования, чтобы записаться на этот курс. Мы рассмотрели каждую тему с большим количеством объяснений. Кроме того, наличие опыта программирования не повредит. После прохождения этого курса вы можете уверенно написать Dart в своем резюме по программированию. этого курса более чем достаточно.",
             "lessons": [
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
-                {
-                    "name": "Основы языка Dart",
-                    "video": "qweqwqweqweqweqweqweqweqweqweqwe"
-                },
                 {
                     "name": "Основы языка Dart",
                     "video": "qweqwqweqweqweqweqweqweqweqweqwe"

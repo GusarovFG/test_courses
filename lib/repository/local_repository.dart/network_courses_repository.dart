@@ -17,12 +17,8 @@ class NetworkCoursesRepository {
     var response = await rootBundle.loadString("assets/db.json");
 
     final courses = Courses.fromRawJson(response);
-    final hiveCourses = await _hiveService.getCourses();
-    if (hiveCourses.last != courses) {
-      await _hiveService.addCourses(courses);
-      return courses.courses;
-    } else {
-      return [];
-    }
+
+    await _hiveService.addCourses(courses);
+    return courses.courses;
   }
 }

@@ -15,7 +15,6 @@ class CourseBloc extends Bloc<CourseBlockEvent, CourseBlocState> {
 
     try {
       List<Course> courses = await LocalCoursesRepository().getCourses();
-      print(courses);
 
       emit(CourseFetchingSuccess(courses));
     } catch (e) {

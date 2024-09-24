@@ -13,10 +13,11 @@ class LocalCoursesRepository {
 
   LocalCoursesRepository._internal();
 
+  //Получение курсов из локальной базы данных
   Future<List<Course>> getCourses() async {
     List<Course> courses = [];
     await hive.getCourses().then((value) {
-      courses = value.first.courses;
+      courses = value.last.courses;
     });
     return courses;
   }

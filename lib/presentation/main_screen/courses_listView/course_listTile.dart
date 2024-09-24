@@ -12,22 +12,23 @@ class CourseListtile extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       decoration: BoxDecor.decorForTile,
       child: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            course.name,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            course.description,
-            style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 12),
-          )
-        ],
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              course.name,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              course.description,
+              style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 12),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

@@ -34,7 +34,7 @@ class DetailScreen extends StatelessWidget {
               height: 5,
             ),
             Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecor.decorForTile,
                 child: Text(course.description)),
             const SizedBox(
